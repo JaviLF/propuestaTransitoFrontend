@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header bg-dark text-white">
+      <h3>Lista De Inscritos</h3>
+      <button class="btn btn-success float-end" routerLink="/create">Nuevo</button>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" >
+        <thead>
+          <tr>
+            <th>CI</th>
+            <th>Nombres</th>
+            <th>Apellido Paterno</th>
+						<th>Apellido Materno</th>
+						<th>Codigo Inscripcion</th>
+						<th>Intentos</th>
+            <th>   </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let inscrito of inscritos">
+            <td>{{inscrito.ci}}</td>
+            <td>{{inscrito.nombreCompleto}}</td>
+            <td>{{inscrito.apellidoPaterno}}</td>
+						<td>{{inscrito.apellidoMaterno}}</td>
+						<td>{{inscrito.codigoInscripcion}}</td>
+						<td>{{inscrito.intentos}}</td>
+             <td>
+              <button routerLink="/inscritos/{{inscrito.id}}" class="btn btn-success">Ver</button>
+              <!-- <button (click)="Eliminar(persona)" class="btn btn-danger" style="margin-left: 20px">Eliminar</button> -->
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>

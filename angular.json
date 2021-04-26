@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "registroTransito"
+    }
+  },
+  "defaultProject": "registroTransito",
+  "cli": {
+    "analytics": false
+  }
 }

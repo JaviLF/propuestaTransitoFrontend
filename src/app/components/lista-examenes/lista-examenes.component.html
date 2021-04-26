@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header bg-dark text-white">
+      <h3>Lista De Examenes</h3>
+      <button class="btn btn-success float-end" routerLink="/createExamen">Nuevo</button>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" >
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Fecha</th>
+            <th>   </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let examen of examenes">
+            <td>{{examen.tipo}}</td>
+            <td>{{examen.fecha | date:'dd/MM/yyyy'}}</td>
+             <td>
+              <!-- <button routerLink="/inscritos/{{inscrito.id}}" class="btn btn-success">Ver</button> -->
+              <!-- <button (click)="Eliminar(persona)" class="btn btn-danger" style="margin-left: 20px">Eliminar</button> -->
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>

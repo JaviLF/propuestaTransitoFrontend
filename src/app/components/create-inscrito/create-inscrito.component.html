@@ -1,0 +1,94 @@
+<div style="width: 500px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="ci">Carnet de identidad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ci"
+          required
+          [(ngModel)]="inscrito.ci"
+          name="ci"
+        />
+      </div>
+
+			<div class="form-group">
+        <label for="nombreCompleto">Nombres</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombreCompleto"
+          required
+          [(ngModel)]="inscrito.nombreCompleto"
+          name="nombreCompleto"
+        />
+      </div>
+
+			<div class="form-group">
+        <label for="apellidoPaterno">Apellido Paterno</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apellidoPaterno"
+          required
+          [(ngModel)]="inscrito.apellidoPaterno"
+          apellidos="apellidoPaterno"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="apellidoMaterno">Apellido Materno</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apellidoMaterno"
+          required
+          [(ngModel)]="inscrito.apellidoMaterno"
+          apellidos="apellidoMaterno"
+        />
+      </div>
+
+			<div class="form-group">
+        <label for="codigoInscripcion">codigo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="codigoInscripcion"
+          required
+          [(ngModel)]="inscrito.codigoInscripcion"
+          codigoInscripcion="codigoInscripcion"
+        />
+      </div>
+
+			<div class="form-group">
+        <label for="intentos">Intentos</label>
+        <input
+          type="number"
+          class="form-control"
+          id="intentos"
+          required
+          [(ngModel)]="inscrito.intentos"
+          intentos="intentos"
+        />
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="fecha_inscripcion">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="inscrito.description"
+          name="description"
+        />
+      </div> -->
+      <button (click)="createInscrito()" class="btn btn-success">Create</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h3>Se ha registrado a la persona {{createdInscrito.nombreCompleto}} con identificacion {{createdInscrito.ci}} </h3>
+      <button class="btn btn-success" routerLink="/inscritos">Ver listado</button>
+    </div>
+  </div>
+</div>
