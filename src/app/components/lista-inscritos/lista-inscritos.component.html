@@ -12,7 +12,9 @@
             <th>Nombres</th>
             <th>Apellido Paterno</th>
 						<th>Apellido Materno</th>
-						<th>Codigo Inscripcion</th>
+						<th>Categoria de Examen</th>
+            <th>Tipo de Examen</th>
+            <th>Fecha de Ultimo Examen</th>
 						<th>Intentos</th>
             <th>   </th>
           </tr>
@@ -23,7 +25,9 @@
             <td>{{inscrito.nombreCompleto}}</td>
             <td>{{inscrito.apellidoPaterno}}</td>
 						<td>{{inscrito.apellidoMaterno}}</td>
-						<td>{{inscrito.codigoInscripcion}}</td>
+						<td>{{inscrito.categoriaExamen}}</td>
+            <td>{{inscrito.tipoExamen}}</td>
+            <td>{{inscrito.fechaUltimoExamen | date:'dd/MM/yyyy'}}</td>
 						<td>{{inscrito.intentos}}</td>
              <td>
               <button routerLink="/inscritos/{{inscrito.id}}" class="btn btn-success">Ver</button>

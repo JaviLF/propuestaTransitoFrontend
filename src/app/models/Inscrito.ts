@@ -4,6 +4,8 @@ export class Inscrito{
   nombreCompleto: String;
   apellidoPaterno: String;
 	apellidoMaterno: String;
-	codigoInscripcion: String;
-	intentos: Number;
+	categoriaExamen: String;
+	tipoExamen: String;
+	fechaUltimoExamen: Date;
+	edad: Number;
 }

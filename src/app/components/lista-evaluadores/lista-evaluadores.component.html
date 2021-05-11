@@ -1,26 +1,32 @@
 <div class="container">
   <div class="card">
     <div class="card-header bg-dark text-white">
-      <h3>Lista De Supervisores</h3>
-      <button class="btn btn-success float-end" routerLink="/createSupervisor">Nuevo</button>
+      <h3>Lista De Evaluadores</h3>
+      <button class="btn btn-success float-end" routerLink="/createEvaluador">Nuevo</button>
     </div>
     <div class="card-body">
       <table class="table table-hover" >
         <thead>
           <tr>
+            <th>Grado Policial</th>
             <th>CI</th>
             <th>Nombres</th>
             <th>Apellido Paterno</th>
 						<th>Apellido Materno</th>
+            <th>Fecha de Alta</th>
+            <th>Fecha de Baja</th>
             <th>   </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let supervisor of supervisores">
-            <td>{{supervisor.ci}}</td>
-            <td>{{supervisor.nombreCompleto}}</td>
-            <td>{{supervisor.apellidoPaterno}}</td>
-						<td>{{supervisor.apellidoMaterno}}</td>
+          <tr *ngFor="let evaluador of evaluadores">
+            <td>{{evaluador.gradoPolicial}}</td>
+            <td>{{evaluador.ci}}</td>
+            <td>{{evaluador.nombreCompleto}}</td>
+            <td>{{evaluador.apellidoPaterno}}</td>
+						<td>{{evaluador.apellidoMaterno}}</td>
+            <td>{{evaluador.fechaAlta | date:'dd/MM/yyyy'}}</td>
+            <td>{{evaluador.fechaBaja | date:'dd/MM/yyyy'}}</td>
             <td>
               <!-- <button routerLink="/inscritos/{{inscrito.id}}" class="btn btn-success">Ver</button> -->
               <!-- <button (click)="Eliminar(persona)" class="btn btn-danger" style="margin-left: 20px">Eliminar</button> -->

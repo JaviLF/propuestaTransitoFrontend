@@ -50,26 +50,59 @@
       </div>
 
 			<div class="form-group">
-        <label for="codigoInscripcion">codigo</label>
-        <input
+        <label for="categoriaExamen">categoria</label>
+        <select
+          class="form-control"
+          id="categoriaExamen"
+          required
+          [(ngModel)]="inscrito.categoriaExamen"
+          categoriaExamen="categoriaExamen"
+        >
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="M">Moto</option>
+          <option value="T pesado">Transporte Pesado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="tipoExamen">tipo</label>
+        <select
           type="text"
           class="form-control"
-          id="codigoInscripcion"
+          id="tipoExamen"
           required
-          [(ngModel)]="inscrito.codigoInscripcion"
-          codigoInscripcion="codigoInscripcion"
+          [(ngModel)]="inscrito.tipoExamen"
+          tipoExamen="tipoExamen"
+        >
+          <option value="T">Teorico</option>
+          <option value="P">Practico</option>
+          <option value="TP">Teorico y practico</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fechaUltimoExamen">Fecha del Ultimo Examen</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fechaUltimoExamen"
+          required
+          [(ngModel)]="inscrito.fechaUltimoExamen"
+          fechaUltimoExamen="fechaUltimoExamen"
         />
       </div>
 
 			<div class="form-group">
-        <label for="intentos">Intentos</label>
+        <label for="edad">Edad</label>
         <input
           type="number"
           class="form-control"
-          id="intentos"
+          id="edad"
           required
-          [(ngModel)]="inscrito.intentos"
-          intentos="intentos"
+          [(ngModel)]="inscrito.edad"
+          edad="edad"
         />
       </div>
 
@@ -87,7 +120,7 @@
     </div>
 
     <div *ngIf="submitted">
-      <h3>Se ha registrado a la persona {{createdInscrito.nombreCompleto}} con identificacion {{createdInscrito.ci}} </h3>
+      <h3>Se ha inscrito a la persona {{createdInscrito.nombreCompleto}} con identificacion {{createdInscrito.ci}} </h3>
       <button class="btn btn-success" routerLink="/inscritos">Ver listado</button>
     </div>
   </div>

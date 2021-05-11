@@ -11,8 +11,8 @@ import { DetallesInscritoComponent } from './components/detalles-inscrito/detall
 import { ButtonComponent } from './components/button/button.component';
 import { ListaExamenesComponent } from './components/lista-examenes/lista-examenes.component';
 import { CreateExamenComponent } from './components/create-examen/create-examen.component';
-import { CreateSupervisorComponent } from './components/create-supervisor/create-supervisor.component';
-import { ListaSupervisoresComponent } from './components/lista-supervisores/lista-supervisores.component';
+import { CreateEvaluadorComponent } from './components/create-evaluador/create-evaluador.component';
+import { ListaEvaluadoresComponent } from './components/lista-evaluadores/lista-evaluadores.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { ListaSupervisoresComponent } from './components/lista-supervisores/list
     ButtonComponent,
     ListaExamenesComponent,
     CreateExamenComponent,
-    CreateSupervisorComponent,
-    ListaSupervisoresComponent
+    CreateEvaluadorComponent,
+    ListaEvaluadoresComponent
   ],
   imports: [
     BrowserModule,

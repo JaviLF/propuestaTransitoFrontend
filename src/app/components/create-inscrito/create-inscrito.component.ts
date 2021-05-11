@@ -13,8 +13,10 @@ export class CreateInscritoComponent implements OnInit {
     nombreCompleto: "Andres",
     apellidoPaterno: "Ruiz",
     apellidoMaterno: "Montoya",
-    codigoInscripcion: "Calle Washington No:858",
-    intentos: 3
+    categoriaExamen: "M",
+    tipoExamen: "TP",
+    fechaUltimoExamen: 2021-5-4,
+    edad: 3
     
   };
   submitted = false;
@@ -31,8 +33,10 @@ export class CreateInscritoComponent implements OnInit {
       nombreCompleto: this.inscrito.nombreCompleto,
       apellidoPaterno: this.inscrito.apellidoPaterno,
       apellidoMaterno: this.inscrito.apellidoMaterno,
-      codigoInscripcion: this.inscrito.codigoInscripcion,
-      intentos: this.inscrito.intentos
+      categoriaExamen: this.inscrito.categoriaExamen,
+      tipoExamen: this.inscrito.tipoExamen,
+      fechaUltimoExamen: this.inscrito.fechaUltimoExamen,
+      edad: this.inscrito.edad
     };
 
     this.inscritoService.create(data)
@@ -51,12 +55,14 @@ export class CreateInscritoComponent implements OnInit {
   newInscrito(): void {
     this.submitted = false;
     this.inscrito = {
-      ci: "64002020",
+    ci: "64002020",
     nombreCompleto: "Andres",
     apellidoPaterno: "Ruiz",
     apellidoMaterno: "Montoya",
-    codigoInscripcion: "Calle Washington No:858",
-    intentos: 3
+    categoriaExamen: "M",
+    tipoExamen: "TP",
+    fechaUltimoExamen: 2021-5-4,
+    edad: 3
       
     };
   }

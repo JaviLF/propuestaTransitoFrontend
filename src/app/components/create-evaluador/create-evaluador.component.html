@@ -1,0 +1,110 @@
+<div style="width: 500px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="ci">Carnet de identidad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ci"
+          required
+          [(ngModel)]="evaluador.ci"
+          name="ci"
+        />
+      </div>
+
+			<div class="form-group">
+        <label for="nombreCompleto">Nombres</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombreCompleto"
+          required
+          [(ngModel)]="evaluador.nombreCompleto"
+          name="nombreCompleto"
+        />
+      </div>
+
+			<div class="form-group">
+        <label for="apellidoPaterno">Apellido Paterno</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apellidoPaterno"
+          required
+          [(ngModel)]="evaluador.apellidoPaterno"
+          name="apellidoPaterno"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="apellidoMaterno">Apellido Materno</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apellidoMaterno"
+          required
+          [(ngModel)]="evaluador.apellidoMaterno"
+          name="apellidoMaterno"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="gradoPolicial">Grado Policial</label>
+        <select
+          class="form-control"
+          id="gradoPolicial"
+          required
+          [(ngModel)]="evaluador.gradoPolicial"
+          name="gradoPolicial"
+        >
+          <option value="Cnl. DESP">Coronel</option>
+          <option value="Tcnl. DEAP">Teniente coronel</option>
+          <option value="My.">Mayor</option>
+          <option value="Cap.">Capitan</option>
+          <option value="Tte.">Teniente</option>
+          <option value="Sbtte.">Subteniente</option>
+          <option value="Sof. superior">Suboficial superior</option>
+          <option value="Sof. mayor">Suboficial mayor</option>
+          <option value="Sof. primero">Suboficial primero</option>
+          <option value="Sof. segundo">Suboficial segundo</option>
+          <option value="Sgto. primero">Sargento primero</option>
+          <option value="Sgto. segundo">Sargento segundo</option>
+          <option value="Cbo.">Cabo</option>
+          <option value="Pol.">Policia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fechaAlta">Fecha de Alta</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fechaAlta"
+          required
+          [(ngModel)]="evaluador.fechaAlta"
+          name="fechaAlta"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="fechaBaja">Fecha de Baja</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fechaBaja"
+          required
+          [(ngModel)]="evaluador.fechaBaja"
+          name="fechaBaja"
+        />
+      </div>
+
+      <button (click)="createEvaluador()" class="btn btn-success">Create</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h3>Se ha registrado al evaluador {{createdEvaluador.nombreCompleto}} con identificacion {{createdEvaluador.ci}} </h3>
+      <button class="btn btn-success" routerLink="/evaluadores">Ver listado</button>
+    </div>
+  </div>
+</div>
